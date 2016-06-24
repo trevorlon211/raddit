@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
-  
   resources :comments
-  
+
   devise_for :users
   resources :links do
     member do
@@ -10,9 +9,12 @@ Rails.application.routes.draw do
     end
     resources :comments
   end
-
-  root to: "links#index"
-
+  root "links#index"
 
 
+ 
+
+
+
+ 
 end
